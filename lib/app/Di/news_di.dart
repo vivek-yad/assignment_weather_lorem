@@ -1,0 +1,5 @@
+class NewsDi{
+  static newsDi(){
+
+  }
+}
