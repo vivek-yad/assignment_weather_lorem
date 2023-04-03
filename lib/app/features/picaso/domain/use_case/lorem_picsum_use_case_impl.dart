@@ -9,7 +9,7 @@ class LoremPicsumUseCaseImpl implements LoremPicsumUseCase{
   LoremPicsumUseCaseImpl(this.dataRepo);
 
   @override
-  Future<List<LoremPicsum>> call() async {
-   return await dataRepo.getLoremPicsumDetail();
+  Future<List<LoremPicsum>> call(int page, int limit) async {
+   return await dataRepo.getLoremPicsumDetail( page,  limit);
   }
 }

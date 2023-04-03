@@ -4,7 +4,7 @@ import 'package:app/app/features/weather/prsentaion/views/weather_page.dart';
 import 'package:get/get.dart';
 
 class DrawerPageController extends GetxController{
-   var data=[WeatherPage(),LoremPicaso(),NewsPage()].obs;
+   var data=[LoremPicaso(),NewsPage(),WeatherPage()].obs;
    Rx<int> selectIndex=0.obs;
    
    selectPage(index) async {

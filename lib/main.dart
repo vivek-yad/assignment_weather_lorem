@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'app/Di/lorem_picsum_di.dart';
+import 'app/Di/weather_di.dart';
 import 'app/features/drawer/drawer/drawer.dart';
 
-void main() {
+Future<void> main() async {
   DiLoremPicsum.loremPicsumInit();
+ await WeatherDi.weatherInit();
   runApp(const MyApp());
 }
 
@@ -33,5 +35,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-

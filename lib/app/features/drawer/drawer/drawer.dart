@@ -37,26 +37,28 @@ class DrawerPage extends StatelessWidget {
                   child: Text('Drawer Header'),
                 ),
                 ListTile(
-                  title: const Text('Weather Detail'),
+                  title: const Text('Lorem Picsum'),
                   onTap: () {
                     Get.back();
                     controller.selectPage(0);
                   },
                 ),
                 ListTile(
-                  title: const Text('Lorem Picsum'),
+                  title: const Text('News Page'),
                   onTap: () {
-                   Get.back();
+                    Get.back();
                     controller.selectPage(1);
                   },
                 ),
                 ListTile(
-                  title: const Text('News Page'),
+                  title: const Text('Weather Detail'),
                   onTap: () {
-                   Get.back();
+                    Get.back();
                     controller.selectPage(2);
                   },
                 ),
+
+
               ],
             ),
           ),

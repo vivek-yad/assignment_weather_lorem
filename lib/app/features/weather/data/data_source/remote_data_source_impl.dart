@@ -10,16 +10,15 @@ import '../../../../secrate_key.dart';
 
 class WeatherDataSourceImpl implements WeatherDataSource {
   @override
-  Future<List<WeatherModel>> getWeatherData(String country) async {
+  Future<WeatherModel> getWeatherData(String country) async {
     String apiUrl =
         "http://api.openweathermap.org/data/2.5/weather?q=$country&APPID=${SecrateKey.weatherApiKey}";
 
-    List<WeatherModel> weatherModel = [];
+    WeatherModel weatherModel;
     var result = await http.get(Uri.parse(apiUrl));
     var response = jsonDecode(result.body);
-    print("response====$response");
-    weatherModel = List<WeatherModel>.from(
-        json.decode(result.body).map((x) => WeatherModel.fromJson(x)));
+    print("response data====$response");
+    weatherModel = WeatherModel.fromJson(response);
     print(weatherModel);
     return weatherModel;
     // TODO: implement getWeatherData

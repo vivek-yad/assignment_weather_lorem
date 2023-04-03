@@ -9,7 +9,7 @@ class RepositoryImpl implements LoremPicsumRepo{
   RepositoryImpl(this.loremPicsumDataSourceImpl);
 
   @override
-  Future<List<LoremPicsum>> getLoremPicsumDetail() async {
-    return await loremPicsumDataSourceImpl.getLoremPicsumList();
+  Future<List<LoremPicsum>> getLoremPicsumDetail(int page,int limit) async {
+    return await loremPicsumDataSourceImpl.getLoremPicsumList( page,limit);
   }
 }
